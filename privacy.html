@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG92WF663X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZG92WF663X');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Privacy & Terms — MAN1K Wild Heart Tour 2026</title>
+    <meta name="description"
+        content="Політика конфіденційності та умови використання сайту tour.man1k.xyz — MAN1K Wild Heart Tour 2026.">
+    <meta property="og:title" content="Privacy & Terms — MAN1K Wild Heart Tour 2026">
+    <meta property="og:url" content="https://tour.man1k.xyz/privacy.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://tour.man1k.xyz/privacy.html">
+    <link rel="icon" href="https://man1k.xyz/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://man1k.xyz/icons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://man1k.xyz/icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Unbounded:wght@200;400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #000;
+            --white: #fff;
+            --off: #b0b0b0;
+            --grey: #666;
+            --dim: #555;
+            --dimmer: #2a2a2a;
+            --red: #a80000;
+            --border: rgba(255, 255, 255, .12);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--off);
+            font-family: 'Unbounded', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ——— Page curtain ——— */
+        .page-curtain {
+            position: fixed;
+            inset: 0;
+            z-index: 100000;
+            background: var(--black);
+            pointer-events: none;
+            transition: opacity 1s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .page-curtain.lifted {
+            opacity: 0;
+        }
+
+        /* ——— Page glitch ——— */
+        .page-glitch {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9997;
+            opacity: 0;
+            mix-blend-mode: screen;
+        }
+
+        .page-glitch.flash {
+            animation: pageGlitchFlash .15s steps(1) 1;
+        }
+
+        @keyframes pageGlitchFlash {
+            0% {
+                opacity: 1;
+                clip-path: inset(20% 0 60% 0);
+                transform: translateX(-6px);
+            }
+
+            20% {
+                opacity: .8;
+                clip-path: inset(70% 0 5% 0);
+                transform: translateX(8px);
+            }
+
+            40% {
+                opacity: .6;
+                clip-path: inset(5% 0 75% 0);
+                transform: translateX(-4px);
+            }
+
+            70% {
+                opacity: .4;
+                clip-path: inset(50% 0 30% 0);
+                transform: translateX(3px);
+            }
+
+            100% {
+                opacity: 0;
+                clip-path: none;
+                transform: translateX(0);
+            }
+        }
+
+        /* ——— Grain ——— */
+        .grain,
+        .grain2 {
+            position: fixed;
+            inset: -50%;
+            width: 200%;
+            height: 200%;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 256px 256px;
+        }
+
+        .grain {
+            opacity: .05;
+            animation: grain .2s steps(1) infinite;
+        }
+
+        .grain2 {
+            opacity: .10;
+            animation: grain .35s steps(1) infinite reverse;
+            background-size: 128px 128px;
+        }
+
+        @keyframes grain {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            10% {
+                transform: translate(-3%, -4%);
+            }
+
+            20% {
+                transform: translate(4%, 2%);
+            }
+
+            30% {
+                transform: translate(-2%, 5%);
+            }
+
+            40% {
+                transform: translate(5%, -3%);
+            }
+
+            50% {
+                transform: translate(-4%, 3%);
+            }
+
+            60% {
+                transform: translate(3%, -5%);
+            }
+
+            70% {
+                transform: translate(-5%, 2%);
+            }
+
+            80% {
+                transform: translate(2%, 4%);
+            }
+
+            90% {
+                transform: translate(-3%, -2%);
+            }
+        }
+
+        /* ——— Scanlines ——— */
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9998;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, .18) 2px, rgba(0, 0, 0, .18) 4px);
+        }
+
+        /* ——— Custom cursor ——— */
+        .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--white);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99997;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+
+        .cursor-ring {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99996;
+            transform: translate(-50%, -50%);
+            transition: width .2s, height .2s, border-color .2s;
+        }
+
+        body.cursor-hover .cursor-ring {
+            width: 48px;
+            height: 48px;
+            border-color: var(--white);
+        }
+
+        /* ——— Topbar ——— */
+        .topbar {
+            border-bottom: 1px solid rgba(255, 255, 255, .35);
+            padding: 14px clamp(16px, 5vw, 72px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1000;
+            background: var(--black);
+        }
+
+        .topbar-text {
+            font-weight: 400;
+            font-size: clamp(6px, 1.1vw, 9px);
+            letter-spacing: .4em;
+            text-transform: uppercase;
+            color: var(--dim);
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-toggle {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            font-size: clamp(7px, 1.1vw, 9px);
+            letter-spacing: .25em;
+            color: var(--dim);
+            background: none;
+            border: 1px solid rgba(255, 255, 255, .2);
+            padding: 5px 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: color .2s, border-color .2s;
+        }
+
+        .lang-toggle:hover {
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .topbar-back {
+            font-weight: 700;
+            font-size: clamp(7px, 1.1vw, 9px);
+            letter-spacing: .35em;
+            color: var(--white);
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--white);
+            padding: 6px 14px;
+            transition: background .2s, color .2s;
+            white-space: nowrap;
+        }
+
+        .topbar-back:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* ——— Hero ——— */
+        .privacy-hero {
+            padding: clamp(40px, 10vw, 120px) clamp(16px, 5vw, 72px) clamp(32px, 7vw, 80px);
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, .35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .privacy-hero::before {
+            content: '✝';
+            position: absolute;
+            font-size: clamp(200px, 55vw, 700px);
+            color: rgba(255, 255, 255, .025);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            line-height: 1;
+            animation: crosspulse 7s ease-in-out infinite;
+        }
+
+        @keyframes crosspulse {
+
+            0%,
+            100% {
+                opacity: .025;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                opacity: .06;
+                transform: translate(-50%, -50%) scale(1.04);
+            }
+        }
+
+        .privacy-hero-title {
+            font-weight: 900;
+            font-size: clamp(52px, 15vw, 180px);
+            line-height: .88;
+            letter-spacing: -.04em;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: fade-up .9s ease forwards .2s, titleflicker 18s steps(1) infinite 5s;
+        }
+
+        .privacy-hero-title span {
+            display: block;
+            font-weight: 200;
+            font-size: .16em;
+            letter-spacing: .4em;
+            color: rgba(255, 255, 255, .22);
+            margin-top: .55em;
+        }
+
+        @keyframes titleflicker {
+
+            0%,
+            92%,
+            94%,
+            97%,
+            100% {
+                opacity: 1;
+            }
+
+            93% {
+                opacity: .15;
+            }
+
+            95% {
+                opacity: .6;
+                transform: translateX(-4px);
+            }
+
+            96% {
+                opacity: .08;
+            }
+
+            98% {
+                opacity: .5;
+                transform: translateX(3px);
+            }
+
+            99% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .privacy-hero-sub {
+            position: relative;
+            z-index: 1;
+            margin-top: clamp(14px, 3vw, 32px);
+            font-weight: 200;
+            font-size: clamp(9px, 1.2vw, 11px);
+            letter-spacing: .2em;
+            color: var(--grey);
+            opacity: 0;
+            animation: fade-up .9s ease forwards .55s;
+        }
+
+        .privacy-hero-sub a {
+            color: var(--white);
+            border-bottom: 1px solid var(--white);
+            text-decoration: none;
+            transition: opacity .2s;
+        }
+
+        .privacy-hero-sub a:hover {
+            opacity: .45;
+        }
+
+        /* ——— Glitch divider ——— */
+        .glitch-div {
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glitch-div::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--black);
+            animation: glitch-line 5s ease-in-out infinite;
+        }
+
+        @keyframes glitch-line {
+
+            0%,
+            84%,
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            87% {
+                transform: translateX(-45%);
+                opacity: 1;
+            }
+
+            93% {
+                transform: translateX(65%);
+                opacity: 1;
+            }
+
+            97% {
+                transform: translateX(110%);
+                opacity: 0;
+            }
+        }
+
+        /* ——— Legal section ——— */
+        .legal-section {
+            padding: clamp(32px, 8vw, 96px) clamp(16px, 5vw, 72px);
+        }
+
+        .legal-category {
+            margin-bottom: clamp(28px, 5vw, 56px);
+        }
+
+        .legal-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-category-label {
+            font-weight: 900;
+            font-size: clamp(9px, 1.6vw, 13px);
+            letter-spacing: .38em;
+            text-transform: uppercase;
+            color: var(--black);
+            background: var(--white);
+            padding: 10px 16px;
+            display: block;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-category-label::after {
+            content: attr(data-text);
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            color: var(--black);
+            animation: labelglitch 22s steps(1) infinite;
+            pointer-events: none;
+        }
+
+        @keyframes labelglitch {
+
+            0%,
+            94%,
+            100% {
+                opacity: 0;
+                transform: none;
+                clip-path: none;
+            }
+
+            95% {
+                opacity: 1;
+                transform: translateX(-6px);
+                clip-path: inset(20% 0 60% 0);
+            }
+
+            96% {
+                opacity: 1;
+                transform: translateX(4px);
+                clip-path: inset(55% 0 15% 0);
+            }
+
+            97% {
+                opacity: 0;
+            }
+        }
+
+        .legal-block {
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-top: none;
+            padding: clamp(18px, 3vw, 32px) clamp(16px, 2.5vw, 28px);
+        }
+
+        .legal-block p {
+            font-weight: 200;
+            font-size: clamp(9px, 1.15vw, 11px);
+            line-height: 2;
+            color: #777;
+            margin-bottom: 14px;
+        }
+
+        .legal-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-block a {
+            color: rgba(255, 255, 255, .55);
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+            text-decoration: none;
+            transition: color .2s, border-color .2s;
+        }
+
+        .legal-block a:hover {
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .legal-block strong {
+            font-weight: 400;
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .legal-block ul {
+            list-style: none;
+            margin: 10px 0 14px 0;
+        }
+
+        .legal-block ul li {
+            font-weight: 200;
+            font-size: clamp(9px, 1.15vw, 11px);
+            line-height: 2;
+            color: #777;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .legal-block ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--dimmer);
+        }
+
+        .legal-block .note {
+            margin-top: 16px;
+            padding: 12px 16px;
+            border-left: 2px solid rgba(255, 255, 255, .15);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: clamp(8px, 1.1vw, 10px);
+            letter-spacing: .06em;
+            color: rgba(255, 255, 255, .3);
+            line-height: 1.8;
+        }
+
+        .legal-block .highlight-box {
+            margin-top: 16px;
+            padding: 14px 18px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .025);
+        }
+
+        .legal-block .highlight-box p {
+            margin-bottom: 6px;
+            color: rgba(255, 255, 255, .45);
+        }
+
+        .legal-block .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-block .warn {
+            color: rgba(168, 0, 0, .8);
+            font-weight: 400;
+        }
+
+        /* ——— Home CTA ——— */
+        .home-cta {
+            text-align: center;
+            padding: clamp(28px, 5vw, 52px) clamp(16px, 5vw, 72px);
+            border-top: 1px solid var(--border);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            font-size: clamp(9px, 1.4vw, 12px);
+            letter-spacing: .35em;
+            text-transform: uppercase;
+            color: var(--black);
+            background: var(--white);
+            padding: clamp(12px, 1.8vw, 16px) clamp(28px, 4.5vw, 52px);
+            text-decoration: none;
+            transition: background .35s ease, color .35s ease, letter-spacing .3s ease, box-shadow .35s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:active {
+            background: var(--red);
+            color: var(--white);
+            letter-spacing: .45em;
+            box-shadow: 0 0 35px rgba(168, 0, 0, .35), 0 0 70px rgba(168, 0, 0, .15);
+        }
+
+        /* ——— Update date ——— */
+        .doc-meta {
+            text-align: center;
+            padding: clamp(20px, 4vw, 40px) clamp(16px, 5vw, 72px);
+            border-top: 1px solid var(--border);
+        }
+
+        .doc-meta span {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 9px;
+            letter-spacing: .3em;
+            color: var(--dimmer);
+            text-transform: uppercase;
+        }
+
+        /* ——— Language switch ——— */
+        body.en .uk-only {
+            display: none;
+        }
+
+        body:not(.en) .en-only {
+            display: none;
+        }
+
+        /* ——— Footer ——— */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, .35);
+        }
+
+        .footer-void {
+            padding: clamp(28px, 5vw, 52px) clamp(16px, 5vw, 72px);
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            text-align: center;
+        }
+
+        .crisis-top {
+            font-size: 9px;
+            letter-spacing: .5em;
+            color: var(--dimmer);
+            text-transform: uppercase;
+            margin-bottom: clamp(10px, 1.8vw, 16px);
+        }
+
+        .footer-void-num {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(36px, 10vw, 96px);
+            color: rgba(255, 255, 255, .08);
+            letter-spacing: .1em;
+            line-height: 1;
+            display: block;
+            animation: voidflicker 11s steps(1) infinite;
+            transition: color .35s ease;
+            cursor: pointer;
+        }
+
+        .footer-void-num:hover {
+            color: var(--red) !important;
+        }
+
+        @keyframes voidflicker {
+
+            0%,
+            93%,
+            96%,
+            100% {
+                opacity: 1;
+            }
+
+            94% {
+                opacity: .1;
+                transform: translateX(-5px);
+            }
+
+            95% {
+                opacity: .5;
+                transform: translateX(4px);
+            }
+
+            97% {
+                opacity: .2;
+            }
+
+            98% {
+                opacity: .8;
+                transform: translateX(-2px);
+            }
+
+            99% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .footer-void-text {
+            margin-top: 12px;
+            font-weight: 400;
+            font-size: clamp(6px, 1.2vw, 10px);
+            letter-spacing: .2em;
+            color: rgba(255, 255, 255, .15);
+            text-transform: uppercase;
+            line-height: 1.8;
+        }
+
+        .footer-main {
+            padding: clamp(22px, 4vw, 44px) clamp(16px, 5vw, 72px);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .footer-brand {
+            display: block;
+            opacity: .55;
+            transition: opacity .2s;
+            animation: brandblink 22s steps(1) infinite;
+        }
+
+        .footer-brand:hover {
+            opacity: .85;
+        }
+
+        .footer-brand img {
+            height: clamp(22px, 2.5vw, 15px);
+            width: auto;
+            display: block;
+        }
+
+        @keyframes brandblink {
+
+            0%,
+            97%,
+            99%,
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+
+            98% {
+                opacity: .2;
+                transform: translateX(3px);
+            }
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: flex-end;
+        }
+
+        .footer-link {
+            font-size: 7px;
+            letter-spacing: .35em;
+            color: rgba(255, 255, 255, .2);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color .2s;
+        }
+
+        .footer-link:hover {
+            color: var(--white);
+        }
+
+        .footer-link.press {
+            color: rgba(255, 255, 255, .3);
+            border-bottom: 1px solid rgba(255, 255, 255, .15);
+            padding-bottom: 2px;
+        }
+
+        .footer-link.press:hover {
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 12px clamp(16px, 5vw, 72px);
+            font-size: 7px;
+            letter-spacing: .2em;
+            color: rgba(255, 255, 255, .15);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        /* ——— Animations ——— */
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity .65s ease, transform .65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ——— Mobile ——— */
+        @media(max-width:600px) {
+            .topbar {
+                padding: 10px 14px;
+            }
+
+            .topbar-text {
+                font-size: 6px;
+                letter-spacing: .2em;
+            }
+
+            .topbar-back {
+                padding: 5px 10px;
+                font-size: 7px;
+            }
+
+            .privacy-hero {
+                padding: 36px 14px 28px;
+            }
+
+            .privacy-hero-title {
+                font-size: clamp(42px, 16vw, 90px);
+            }
+
+            .legal-section {
+                padding: 24px 14px;
+            }
+
+            .legal-category {
+                margin-bottom: 24px;
+            }
+
+            .legal-category-label {
+                font-size: 8px;
+                letter-spacing: .25em;
+                padding: 9px 12px;
+            }
+
+            .legal-block {
+                padding: 14px 12px;
+            }
+
+            .legal-block p,
+            .legal-block ul li {
+                font-size: 10px;
+            }
+
+            .footer-void {
+                padding: 20px 14px;
+            }
+
+            .footer-main {
+                padding: 20px 14px;
+            }
+
+            .footer-bottom {
+                padding: 10px 14px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cursor-dot,
+            .cursor-ring {
+                display: none !important;
+            }
+        }
+
+        @media(max-width:480px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-brand img {
+                margin: 0 auto;
+            }
+
+            .footer-nav {
+                align-items: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+
+            .topbar-right {
+                gap: 6px;
+            }
+        }
+
+        @media(max-width:380px) {
+            .privacy-hero-title {
+                font-size: clamp(34px, 14vw, 68px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-curtain" id="pageCurtain"></div>
+    <div class="page-glitch" id="pageGlitch"></div>
+    <div class="grain"></div>
+    <div class="grain2"></div>
+    <div class="scanlines"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <header class="topbar">
+        <p class="topbar-text">Wild Heart Tour 2026</p>
+        <div class="topbar-right">
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+            <a href="index.html" class="topbar-back uk-only">← Назад</a>
+            <a href="index.html" class="topbar-back en-only">← Back</a>
+        </div>
+    </header>
+
+    <!-- ——— HERO ——— -->
+    <section class="privacy-hero">
+        <h1 class="privacy-hero-title uk-only">
+            PRIVACY<span>КОНФІДЕНЦІЙНІСТЬ &amp; УМОВИ</span>
+        </h1>
+        <h1 class="privacy-hero-title en-only">
+            PRIVACY<span>POLICY &amp; TERMS OF USE</span>
+        </h1>
+        <p class="privacy-hero-sub uk-only">
+            Питання? &nbsp;<a href="mailto:void@man1k.xyz">void@man1k.xyz</a>
+        </p>
+        <p class="privacy-hero-sub en-only">
+            Questions? &nbsp;<a href="mailto:void@man1k.xyz">void@man1k.xyz</a>
+        </p>
+    </section>
+
+    <div class="glitch-div"></div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         UKRAINIAN CONTENT
+    ══════════════════════════════════════════════════════════ -->
+    <section class="legal-section uk-only">
+
+        <!-- I. ЗАГАЛЬНА ІНФОРМАЦІЯ -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="I · ЗАГАЛЬНА ІНФОРМАЦІЯ">I &nbsp;·&nbsp; ЗАГАЛЬНА ІНФОРМАЦІЯ</p>
+            <div class="legal-block">
+                <p>Цей документ є об'єднаною Політикою конфіденційності та Умовами використання сайту
+                    <strong>tour.man1k.xyz</strong> (далі — «Сайт»), що функціонує в рамках Wild Heart Tour 2026. Сайт
+                    надає інформацію про заходи та забезпечує посилання для придбання квитків через зовнішні платформи.
+                </p>
+                <p>Використовуючи Сайт, ти погоджуєшся з цим документом у повному обсязі. Якщо не погоджуєшся — будь
+                    ласка, не використовуй Сайт.</p>
+                <p>Ці умови можуть бути оновлені без окремого повідомлення. Актуальна версія завжди доступна за адресою
+                    <strong>tour.man1k.xyz/privacy.html</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- II. ЯКІ ДАНІ ЗБИРАЄМО -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="II · ЯКІ ДАНІ МИ ЗБИРАЄМО">II &nbsp;·&nbsp; ЯКІ ДАНІ МИ ЗБИРАЄМО
+            </p>
+            <div class="legal-block">
+                <p><strong>Google Analytics 4 (ідентифікатор вимірювання: G-ZG92WF663X)</strong></p>
+                <p>Сайт використовує Google Analytics 4 для аналізу відвідуваності. Це єдиний інструмент збору даних на
+                    цьому Сайті. Google Analytics автоматично збирає:</p>
+                <ul>
+                    <li>переглянуті сторінки та тривалість сесії</li>
+                    <li>джерело трафіку (пошук, прямий, реферальний)</li>
+                    <li>тип пристрою, операційна система, браузер</li>
+                    <li>країна та місто (приблизне, без точної геолокації)</li>
+                    <li>анонімізована IP-адреса</li>
+                </ul>
+                <p>Ці дані є агрегованими та анонімізованими — вони <strong>не дозволяють ідентифікувати тебе
+                        особисто</strong>. Ми не збираємо твоє ім'я, email, номер телефону чи будь-яку іншу пряму
+                    персональну інформацію через Сайт.</p>
+                <p>Обробник аналітичних даних: <strong>Google Ireland Limited</strong>, відповідно до умов Google
+                    Analytics та GDPR. Детальніше: <a href="https://policies.google.com/privacy" target="_blank"
+                        rel="noopener">policies.google.com/privacy</a>.</p>
+                <div class="note">
+                    // Ніяких рекламних пікселів. Ніяких пікселів Facebook/Meta. Ніяких маркетингових трекерів.<br>
+                    // Ніякого крос-сайтового відстеження. Тільки базова аналітика GA4.
+                </div>
+            </div>
+        </div>
+
+        <!-- III. COOKIES (ФАЙЛИ COOKIE) -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="III · COOKIES">III &nbsp;·&nbsp; COOKIES</p>
+            <div class="legal-block">
+                <p>Сайт використовує виключно аналітичні cookies від Google Analytics. Ніяких інших cookie-файлів немає.
+                </p>
+                <div class="highlight-box">
+                    <p><strong>Файли, які встановлюються Google Analytics:</strong></p>
+                    <p><strong>_ga</strong> — ідентифікує унікального відвідувача. Термін: 2 роки.</p>
+                    <p><strong>_gid</strong> — розрізняє сесії протягом дня. Термін: 24 години.</p>
+                    <p><strong>_gat</strong> — обмежує частоту запитів до GA. Термін: 1 хвилина.</p>
+                </div>
+                <p>Продовжуючи користуватися Сайтом, ти погоджуєшся зі встановленням цих cookie-файлів. Ти маєш право
+                    відмовитись або видалити їх у будь-який момент:</p>
+                <ul>
+                    <li>через налаштування свого браузера (розділ «Cookie» або «Конфіденційність»)</li>
+                    <li>через розширення <a href="https://tools.google.com/dlpage/gaoptout" target="_blank"
+                            rel="noopener">Google Analytics Opt-out Browser Add-on</a></li>
+                    <li>через режим «Приватний перегляд» / Incognito</li>
+                </ul>
+                <p>Відмова від cookie не обмежує доступ до Сайту — весь контент залишається повністю доступним.</p>
+            </div>
+        </div>
+
+        <!-- IV. КВИТКИ ТА OTTRY -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="IV · КВИТКИ ТА OTTRY">IV &nbsp;·&nbsp; КВИТКИ ТА OTTRY</p>
+            <div class="legal-block">
+                <p>Офіційні квитки на заходи Wild Heart Tour 2026 продаються виключно через <strong>ТОВ «Оттрі»
+                        (Ottry)</strong> — незалежного квиткового оператора та самостійного обробника персональних
+                    даних. З питань платежів і обробки даних у межах квиткової платформи — в першу чергу до Ottry.</p>
+                <div class="highlight-box">
+                    <p><strong>Контакти ТОВ «Оттрі»:</strong></p>
+                    <p>Email: <a href="mailto:info@ottry.com">info@ottry.com</a></p>
+                    <p>Політика конфіденційності: <a href="https://ottry.com/privacy" target="_blank"
+                            rel="noopener">ottry.com/privacy</a></p>
+                    <p>Умови використання: <a href="https://ottry.com/terms" target="_blank"
+                            rel="noopener">ottry.com/terms</a></p>
+                </div>
+                <p><strong>Дані, які отримує організатор.</strong> При придбанні квитка через платформу Ottry
+                    організатор отримує наступну інформацію: <strong>час покупки, тариф квитка, ім'я та прізвище
+                        покупця, номер телефону</strong>. Платіжні реквізити організатор не отримує — вони залишаються
+                    виключно у Ottry.</p>
+                <p>Ці дані зберігаються організатором, артистом та командою <strong>безстроково</strong> в маркетингових
+                    і організаційних цілях. Зберігання здійснюється <strong>виключно офлайн</strong>, з гарантією
+                    належного захисту та нерозголошення. Дані <strong>ніколи не передаються третім особам</strong>.</p>
+                <p>Крім маркетингового використання, зазначені дані можуть бути задіяні в <strong>організаційних цілях
+                        під час туру</strong> — зокрема, для контролю входу за персональними даними у разі масового
+                    відключення інтернету або недоступності електронних квитків.</p>
+                <p>Для видалення твоїх персональних даних з бази організатора — надішли запит на <a
+                        href="mailto:void@man1k.xyz">void@man1k.xyz</a>. Запит буде виконано протягом розумного терміну.
+                </p>
+                <p>Для повернення коштів або інших операцій з квитком звертайся безпосередньо до Ottry — ми не маємо
+                    доступу до їхньої платіжної бази.</p>
+            </div>
+        </div>
+
+        <!-- V. ЗБЕРІГАННЯ ДАНИХ ТА АРХІВИ -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="V · ЗБЕРІГАННЯ ДАНИХ ТА АРХІВИ">V &nbsp;·&nbsp; ЗБЕРІГАННЯ ДАНИХ
+                ТА АРХІВИ</p>
+            <div class="legal-block">
+                <p>Аналітичні дані Google Analytics зберігаються відповідно до налаштувань платформи — за замовчуванням
+                    до 26 місяців, після чого автоматично видаляються. Управляти цим зберіганням можна лише через
+                    вимкнення GA у налаштуваннях браузера.</p>
+                <p>Сайт може бути змінений, скорочений або повністю видалений після завершення Wild Heart Tour 2026 без
+                    попереднього повідомлення.</p>
+                <p class="warn"><strong>Важливо:</strong> Після видалення або редагування будь-яких сторінок цього Сайту
+                    ця Політика конфіденційності та Умови використання <strong>не поширюються</strong> на кешовані,
+                    збережені або архівні копії в сервісах типу Wayback Machine (web.archive.org), Google Cache,
+                    Archive.today та інших подібних службах. Ми не контролюємо та не несемо відповідальності за вміст
+                    архівних версій.</p>
+                <p>Метадані Сайту — включно з заголовками сторінок, мета-описами, структурованими даними (JSON-LD),
+                    відкритими текстовими блоками — можуть бути та вже є проіндексовані пошуковими системами,
+                    використані для навчання великих мовних моделей (LLM) і збережені у відповідних базах даних і
+                    корпусах <strong>безстроково</strong>, незалежно від подальшої долі Сайту. Публікуючи будь-який
+                    контент у відкритому доступі в мережі, необхідно усвідомлювати це.</p>
+            </div>
+        </div>
+
+        <!-- VI. АВТОРСЬКІ ПРАВА -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="VI · АВТОРСЬКІ ПРАВА">VI &nbsp;·&nbsp; АВТОРСЬКІ ПРАВА</p>
+            <div class="legal-block">
+                <p>Субдомен <strong>tour.man1k.xyz</strong> є частиною домену <strong>man1k.xyz</strong> і підпадає під
+                    його Copyright Notice.</p>
+                <div class="highlight-box">
+                    <p>Повний текст Copyright Notice: <a href="https://man1k.xyz/legal/copyright" target="_blank"
+                            rel="noopener">man1k.xyz/legal/copyright</a></p>
+                </div>
+                <p>Весь контент Сайту — включно з текстами, дизайном, графікою, логотипами, анімаціями та кодом — є
+                    інтелектуальною власністю та захищений авторським правом. Відтворення, копіювання, розповсюдження
+                    або комерційне використання будь-яких матеріалів Сайту без письмового дозволу є порушенням
+                    авторських прав.</p>
+                <p>Фотографії та відеозаписи, зроблені відвідувачами під час заходів, належать їхнім авторам. Ми
+                    заохочуємо їх публікацію та поширення, у тому числі в комерційних цілях, з тегом художника.</p>
+            </div>
+        </div>
+
+        <!-- VII. УМОВИ ВИКОРИСТАННЯ -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="VII · УМОВИ ВИКОРИСТАННЯ">VII &nbsp;·&nbsp; УМОВИ ВИКОРИСТАННЯ
+            </p>
+            <div class="legal-block">
+                <p>Використовуючи Сайт, ти погоджуєшся:</p>
+                <ul>
+                    <li>не здійснювати автоматизоване збирання (скрейпінг) даних Сайту без дозволу</li>
+                    <li>не копіювати, не відтворювати та не поширювати дизайн або контент без письмового дозволу</li>
+                    <li>не вбудовувати (фреймінг) Сайт на інших ресурсах без дозволу</li>
+                    <li>не використовувати Сайт у протиправних цілях</li>
+                </ul>
+                <p><strong>Квитки та умови входу:</strong></p>
+                <ul>
+                    <li><strong>Усі заходи туру, крім Хмельницького, мають вікове обмеження 18+.</strong> На вході
+                        обов'язкове пред'явлення оригіналу документа з фото (паспорт, ID-картка) або застосунку «Дія».
+                        Копії не приймаються.</li>
+                    <li>Наявність квитка <strong>не гарантує вхід</strong> у разі сильного сп'яніння, агресивної або
+                        підозрілої поведінки — а також на розсуд охорони на вході. Рішення охорони є остаточним.</li>
+                    <li>Організатор залишає за собою право <strong>не повертати кошти</strong> за квиток у випадку, якщо
+                        захід було скасовано або перервано через оголошення повітряної тривоги чи інші надзвичайні
+                        обставини, пов'язані з безпекою.</li>
+                </ul>
+                <p><strong>Сфера дії цього документа:</strong></p>
+                <ul>
+                    <li>Цей документ <strong>не поширюється</strong> на захід у Львові 27 червня
+                        (<strong>MIST</strong>). Це окреме шоу, організоване не командою артиста та не пов'язане
+                        безпосередньо з проектом MAN1K або Wild Heart Tour 2026. З питань MIST — до організаторів
+                        фестивалю.</li>
+                </ul>
+                <p><strong>Загублені речі:</strong> Організатор не несе відповідальності за речі, загублені або вкрадені
+                    на заходах. Проте гарантує, що за можливості докладе зусиль для допомоги у їх пошуку. З цього
+                    питання — <a href="mailto:void@man1k.xyz">void@man1k.xyz</a>.</p>
+                <p><strong>Повідомлення про зміни:</strong> Будь-які зміни у розкладі, місці проведення або скасуванні
+                    заходів будуть оголошені через <strong>офіційні соціальні мережі артиста</strong> та, за можливості,
+                    через квиткового оператора Ottry (email або SMS).</p>
+                <p>Ми не несемо відповідальності за:</p>
+                <ul>
+                    <li>рішення, дії або помилки квиткового оператора Ottry</li>
+                    <li>дії або бездіяльність майданчиків (клубів, фестивалів), де відбуваються заходи</li>
+                    <li>вміст зовнішніх сайтів, на які є посилання з цього Сайту</li>
+                    <li>будь-який прямий чи непрямий збиток внаслідок використання Сайту</li>
+                </ul>
+                <p>Ці Умови регулюються законодавством <strong>України</strong>. Усі спори підлягають вирішенню у
+                    відповідних судах України.</p>
+                <div class="note">
+                    // Після завершення туру сайт може бути архівований або видалений.<br>
+                    // Архівні версії сайту не охоплюються дією цих Умов.
+                </div>
+            </div>
+        </div>
+
+        <!-- VIII. ОРГАНІЗАТОР ТА КОНТАКТИ -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="VIII · ОРГАНІЗАТОР ТА КОНТАКТИ">VIII &nbsp;·&nbsp; ОРГАНІЗАТОР ТА
+                КОНТАКТИ</p>
+            <div class="legal-block">
+                <p><strong>Організатор заходів:</strong></p>
+                <div class="highlight-box">
+                    <p><strong>ФОП Борук Олена Володимирівна</strong></p>
+                    <p>ЄДРПОУ: 3067212881</p>
+                </div>
+                <p><strong>Офіційний квитковий оператор:</strong></p>
+                <div class="highlight-box">
+                    <p><strong>ТОВ «Оттрі» (Ottry)</strong></p>
+                    <p>Email: <a href="mailto:info@ottry.com">info@ottry.com</a></p>
+                    <p>Privacy: <a href="https://ottry.com/privacy" target="_blank" rel="noopener">ottry.com/privacy</a>
+                    </p>
+                    <p>Terms: <a href="https://ottry.com/terms" target="_blank" rel="noopener">ottry.com/terms</a></p>
+                </div>
+                <p>З будь-яких питань — щодо Сайту, преси, юридичних та офіційних запитів, а також інцидентів під час
+                    офлайн-заходів — звертайся:</p>
+                <div class="highlight-box">
+                    <p><strong>void@man1k.xyz</strong></p>
+                </div>
+                <p>Для запитів на видалення даних, пов'язаних з квитками, звертайся напряму до
+                    <strong>info@ottry.com</strong>.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         ENGLISH CONTENT
+    ══════════════════════════════════════════════════════════ -->
+    <section class="legal-section en-only">
+
+        <!-- I. OVERVIEW -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="I · OVERVIEW">I &nbsp;·&nbsp; OVERVIEW</p>
+            <div class="legal-block">
+                <p>This document is the combined Privacy Policy and Terms of Use for <strong>tour.man1k.xyz</strong>
+                    (the "Site"), operating in connection with the Wild Heart Tour 2026. The Site provides event
+                    information and links to purchase tickets through external platforms.</p>
+                <p>By using the Site, you agree to this document in full. If you do not agree, please do not use the
+                    Site.</p>
+                <p>These terms may be updated without separate notice. The current version is always available at
+                    <strong>tour.man1k.xyz/privacy.html</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- II. DATA WE COLLECT -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="II · DATA WE COLLECT">II &nbsp;·&nbsp; DATA WE COLLECT</p>
+            <div class="legal-block">
+                <p><strong>Google Analytics 4 (Measurement ID: G-ZG92WF663X)</strong></p>
+                <p>The Site uses Google Analytics 4 — the only data collection tool on this Site. Google Analytics
+                    automatically collects:</p>
+                <ul>
+                    <li>pages viewed and session duration</li>
+                    <li>traffic source (search, direct, referral)</li>
+                    <li>device type, operating system, browser</li>
+                    <li>country and city (approximate, no precise geolocation)</li>
+                    <li>anonymised IP address</li>
+                </ul>
+                <p>This data is aggregated and anonymised — it <strong>does not allow you to be identified
+                        personally</strong>. We do not collect your name, email, phone number or any other direct
+                    personal information through the Site itself.</p>
+                <p>Analytics data processor: <strong>Google Ireland Limited</strong>, subject to Google Analytics terms
+                    and GDPR. See: <a href="https://policies.google.com/privacy" target="_blank"
+                        rel="noopener">policies.google.com/privacy</a>.</p>
+                <div class="note">
+                    // No advertising pixels. No Facebook/Meta pixels. No marketing trackers.<br>
+                    // No cross-site tracking. Only basic GA4 analytics.
+                </div>
+            </div>
+        </div>
+
+        <!-- III. COOKIES -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="III · COOKIES">III &nbsp;·&nbsp; COOKIES</p>
+            <div class="legal-block">
+                <p>The Site exclusively uses analytical cookies from Google Analytics. No other cookies are set.</p>
+                <div class="highlight-box">
+                    <p><strong>Cookies set by Google Analytics:</strong></p>
+                    <p><strong>_ga</strong> — identifies a unique visitor. Duration: 2 years.</p>
+                    <p><strong>_gid</strong> — distinguishes sessions within a day. Duration: 24 hours.</p>
+                    <p><strong>_gat</strong> — limits request rate to GA. Duration: 1 minute.</p>
+                </div>
+                <p>By continuing to use the Site, you consent to these cookies being set. You may opt out or delete them
+                    at any time:</p>
+                <ul>
+                    <li>via your browser settings (Privacy or Cookie section)</li>
+                    <li>via the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google
+                            Analytics Opt-out Browser Add-on</a></li>
+                    <li>via Private/Incognito browsing mode</li>
+                </ul>
+                <p>Opting out of cookies does not restrict access to the Site — all content remains fully accessible.
+                </p>
+            </div>
+        </div>
+
+        <!-- IV. TICKETS & OTTRY -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="IV · TICKETS & OTTRY">IV &nbsp;·&nbsp; TICKETS &amp; OTTRY</p>
+            <div class="legal-block">
+                <p>Official tickets for Wild Heart Tour 2026 events are sold exclusively through <strong>Ottry</strong>
+                    — an independent ticketing operator and an independent data controller and processor. For all
+                    payment and platform-related enquiries, contact Ottry first.</p>
+                <div class="highlight-box">
+                    <p><strong>Ottry contact details:</strong></p>
+                    <p>Email: <a href="mailto:info@ottry.com">info@ottry.com</a></p>
+                    <p>Privacy Policy: <a href="https://ottry.com/privacy" target="_blank"
+                            rel="noopener">ottry.com/privacy</a></p>
+                    <p>Terms of Use: <a href="https://ottry.com/terms" target="_blank"
+                            rel="noopener">ottry.com/terms</a></p>
+                </div>
+                <p><strong>Data received by the event organiser.</strong> When purchasing a ticket via Ottry, the
+                    organiser receives the following information: <strong>time of purchase, ticket tier, buyer's first
+                        and last name, and phone number</strong>. Payment details are not received by the organiser —
+                    they remain exclusively with Ottry.</p>
+                <p>This data is stored by the organiser, artist and team <strong>indefinitely</strong> for marketing and
+                    organisational purposes. Storage is maintained <strong>offline only</strong>, with a guarantee of
+                    proper protection and non-disclosure. Data is <strong>never shared with third parties</strong>.</p>
+                <p>In addition to marketing use, this data may be used for <strong>organisational purposes during the
+                        tour</strong> — including entry verification by personal details in the event of a widespread
+                    internet outage or unavailability of electronic tickets.</p>
+                <p>To request deletion of your personal data from the organiser's records, send a request to <a
+                        href="mailto:void@man1k.xyz">void@man1k.xyz</a>. Requests will be actioned within a reasonable
+                    timeframe.</p>
+                <p>For refunds or other ticket operations, contact Ottry directly — we have no access to their payment
+                    database.</p>
+            </div>
+        </div>
+
+        <!-- V. DATA RETENTION & ARCHIVES -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="V · DATA RETENTION & ARCHIVES">V &nbsp;·&nbsp; DATA RETENTION
+                &amp; ARCHIVES</p>
+            <div class="legal-block">
+                <p>Google Analytics data is retained in accordance with platform settings — by default up to 26 months,
+                    then automatically deleted. You can manage this by disabling GA via your browser settings.</p>
+                <p>The Site may be modified, reduced in scope or permanently removed after the conclusion of Wild Heart
+                    Tour 2026 without prior notice.</p>
+                <p class="warn"><strong>Important:</strong> After the deletion or editing of any pages of this Site,
+                    this Privacy Policy and Terms of Use <strong>do not apply</strong> to cached, saved or archived
+                    copies held by services such as the Wayback Machine (web.archive.org), Google Cache, Archive.today
+                    or any other archival service. We do not control and are not responsible for the content of archived
+                    versions.</p>
+                <p>Site metadata — including page titles, meta descriptions, structured data (JSON-LD), and open text —
+                    may be and has been indexed by search engines, used to train large language models (LLMs), and
+                    stored in relevant datasets and corpora <strong>indefinitely</strong>, regardless of what
+                    subsequently happens to the Site. Publishing any content openly on the web carries this inherent
+                    implication.</p>
+            </div>
+        </div>
+
+        <!-- VI. COPYRIGHT -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="VI · COPYRIGHT">VI &nbsp;·&nbsp; COPYRIGHT</p>
+            <div class="legal-block">
+                <p>The subdomain <strong>tour.man1k.xyz</strong> is part of the <strong>man1k.xyz</strong> domain and
+                    falls under its Copyright Notice.</p>
+                <div class="highlight-box">
+                    <p>Full Copyright Notice: <a href="https://man1k.xyz/legal/copyright" target="_blank"
+                            rel="noopener">man1k.xyz/legal/copyright</a></p>
+                </div>
+                <p>All Site content — including texts, design, graphics, logos, animations and code — is intellectual
+                    property and protected by copyright. Reproduction, copying, distribution or commercial use of any
+                    Site materials without written permission constitutes copyright infringement.</p>
+                <p>Photographs and videos taken by attendees at events belong to their respective creators. We encourage
+                    their publication and distribution, including for commercial purposes, with a tag of the artist.</p>
+            </div>
+        </div>
+
+        <!-- VII. TERMS OF USE -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="VII · TERMS OF USE">VII &nbsp;·&nbsp; TERMS OF USE</p>
+            <div class="legal-block">
+                <p>By using the Site, you agree:</p>
+                <ul>
+                    <li>not to perform automated data collection (scraping) from the Site without permission</li>
+                    <li>not to copy, reproduce or distribute design or content without written permission</li>
+                    <li>not to frame the Site on other resources without permission</li>
+                    <li>not to use the Site for unlawful purposes</li>
+                </ul>
+                <p><strong>Tickets &amp; entry conditions:</strong></p>
+                <ul>
+                    <li><strong>All tour events except Khmelnytskyi are strictly 18+.</strong> Valid photo ID (passport
+                        or national ID card) or the Diia app is required at entry. Copies are not accepted.</li>
+                    <li>Holding a ticket <strong>does not guarantee entry</strong> in cases of severe intoxication,
+                        aggressive or suspicious behaviour, or at the sole discretion of door security. Security
+                        decisions are final.</li>
+                    <li>The organiser reserves the right <strong>not to issue refunds</strong> if an event is cancelled
+                        or interrupted due to an air raid alert or other security-related emergency circumstances.</li>
+                </ul>
+                <p><strong>Scope of this document:</strong></p>
+                <ul>
+                    <li>This document <strong>does not apply</strong> to the Lviv event on 27 June (<strong>MIST
+                            FEST</strong>). This is a separate show not organised by the artist's team and has no direct
+                        connection to the MAN1K project or Wild Heart Tour 2026. For MIST-related enquiries, contact the
+                        festival organisers directly.</li>
+                </ul>
+                <p><strong>Lost property:</strong> The organiser accepts no liability for lost or stolen items at
+                    events, but guarantees to make reasonable efforts to assist with their recovery where possible.
+                    Contact: <a href="mailto:void@man1k.xyz">void@man1k.xyz</a>.</p>
+                <p><strong>Change notifications:</strong> Any changes to schedule, venue or event cancellations will be
+                    announced via the <strong>artist's official social media</strong> and, where possible, through the
+                    Ottry ticketing operator (by email or SMS).</p>
+                <p>We are not responsible for:</p>
+                <ul>
+                    <li>decisions, actions or errors of the ticketing operator Ottry</li>
+                    <li>actions or inactions of venues where events take place</li>
+                    <li>content of external websites linked from this Site</li>
+                    <li>any direct or indirect damage resulting from use of the Site</li>
+                </ul>
+                <p>These Terms are governed by the laws of <strong>Ukraine</strong>. All disputes are subject to
+                    resolution in the appropriate courts of Ukraine.</p>
+                <div class="note">
+                    // After the tour concludes, the site may be archived or removed.<br>
+                    // Archived versions of the site are not covered by these Terms.
+                </div>
+            </div>
+        </div>
+
+        <!-- VIII. CONTACT -->
+        <div class="legal-category reveal">
+            <p class="legal-category-label" data-text="VIII · CONTACT">VIII &nbsp;·&nbsp; CONTACT</p>
+            <div class="legal-block">
+                <p>For any enquiries — regarding the Site, press, legal and official requests, or offline incidents at
+                    events — please contact:</p>
+                <div class="highlight-box">
+                    <p><strong>void@man1k.xyz</strong></p>
+                </div>
+                <p><strong>Official ticketing operator:</strong></p>
+                <div class="highlight-box">
+                    <p><strong>Ottry</strong></p>
+                    <p>Email: <a href="mailto:info@ottry.com">info@ottry.com</a></p>
+                    <p>Privacy: <a href="https://ottry.com/privacy" target="_blank" rel="noopener">ottry.com/privacy</a>
+                    </p>
+                    <p>Terms: <a href="https://ottry.com/terms" target="_blank" rel="noopener">ottry.com/terms</a></p>
+                </div>
+                <p>For data deletion requests related to tickets, contact Ottry directly at
+                    <strong>info@ottry.com</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ——— Doc meta ——— -->
+    <div class="doc-meta">
+        <span class="uk-only">Останнє оновлення: червень 2026 &nbsp;·&nbsp; tour.man1k.xyz</span>
+        <span class="en-only">Last updated: June 2026 &nbsp;·&nbsp; tour.man1k.xyz</span>
+    </div>
+
+
+    <!-- ——— Home CTA ——— -->
+    <div class="home-cta">
+        <a href="index.html" class="btn-primary uk-only">← На головну</a>
+        <a href="index.html" class="btn-primary en-only">← Back to home</a>
+    </div>
+
+    <div class="glitch-div"></div>
+
+    <!-- ——— FOOTER ——— -->
+    <footer>
+        <div class="footer-bottom">
+            <span>© 2026 ФОП Олена Володимирівна · All rights reserved</span>
+            <span>tour.man1k.xyz</span>
+        </div>
+    </footer>
+
+    <script>
+        /* ——— Page curtain ——— */
+        (function () {
+            var c = document.getElementById('pageCurtain');
+            var gl = document.getElementById('pageGlitch');
+            if (!c) return;
+            setTimeout(function () {
+                c.classList.add('lifted');
+                if (gl) {
+                    setTimeout(function () { gl.classList.add('flash'); }, 100);
+                    setTimeout(function () { gl.classList.remove('flash'); void gl.offsetWidth; gl.classList.add('flash'); }, 300);
+                    setTimeout(function () { gl.classList.remove('flash'); void gl.offsetWidth; gl.classList.add('flash'); }, 500);
+                    setTimeout(function () { gl.classList.remove('flash'); }, 680);
+                }
+            }, 200);
+            setTimeout(function () { c.style.display = 'none'; }, 1400);
+        })();
+
+        /* ——— Page glitch ——— */
+        (function () {
+            var gl = document.getElementById('pageGlitch');
+            if (!gl) return;
+            gl.style.background = 'linear-gradient(0deg,transparent 40%,rgba(255,255,255,.04) 41%,transparent 42%,transparent 58%,rgba(255,255,255,.03) 59%,transparent 60%)';
+            function fire() {
+                gl.classList.remove('flash');
+                void gl.offsetWidth;
+                gl.classList.add('flash');
+                setTimeout(function () { gl.classList.remove('flash'); }, 180);
+                setTimeout(fire, 2000 + Math.random() * 8000);
+            }
+            setTimeout(fire, 1500 + Math.random() * 3000);
+        })();
+
+        /* ——— Custom cursor ——— */
+        (function () {
+            var dot = document.getElementById('cursorDot');
+            var ring = document.getElementById('cursorRing');
+            if (!dot || !ring) return;
+            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+                dot.style.display = 'none'; ring.style.display = 'none'; return;
+            }
+            var mx = 0, my = 0, rx = 0, ry = 0;
+            document.addEventListener('mousemove', function (e) {
+                mx = e.clientX; my = e.clientY;
+                dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+            });
+            (function animRing() {
+                rx += (mx - rx) * .14; ry += (my - ry) * .14;
+                ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+                requestAnimationFrame(animRing);
+            })();
+            document.querySelectorAll('a,button').forEach(function (el) {
+                el.addEventListener('mouseenter', function () { document.body.classList.add('cursor-hover'); });
+                el.addEventListener('mouseleave', function () { document.body.classList.remove('cursor-hover'); });
+            });
+        })();
+
+        /* ——— Reveal on scroll ——— */
+        (function () {
+            var elems = document.querySelectorAll('.reveal');
+            if (!elems.length) return;
+            if ('IntersectionObserver' in window) {
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+                    });
+                }, { threshold: 0.04 });
+                elems.forEach(function (el) { obs.observe(el); });
+            } else {
+                elems.forEach(function (el) { el.classList.add('visible'); });
+            }
+        })();
+
+        /* ——— Language toggle ——— */
+        (function () {
+            var btn = document.getElementById('langToggle');
+            if (!btn) return;
+            var isEN = false;
+            btn.addEventListener('click', function () {
+                isEN = !isEN;
+                if (isEN) {
+                    document.body.classList.add('en');
+                    document.documentElement.lang = 'en';
+                    btn.textContent = 'UA';
+                    btn.setAttribute('aria-label', 'Switch to Ukrainian');
+                } else {
+                    document.body.classList.remove('en');
+                    document.documentElement.lang = 'uk';
+                    btn.textContent = 'EN';
+                    btn.setAttribute('aria-label', 'Switch to English');
+                }
+                /* re-trigger reveals for newly visible elements */
+                document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+                    var rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) el.classList.add('visible');
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

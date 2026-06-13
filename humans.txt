@@ -1,0 +1,39 @@
+/* HUMANS.TXT — humanstxt.org */
+/* Because machines get robots.txt. You get this. */
+
+  WILD HEART TOUR 2026
+  Witch House · Dark Electronic · Ukraine
+
+
+/* ARTIST */
+
+  Name: MAN1K
+  Instagram: @http.man1k
+  Location: Ukraine
+
+
+/* THANKS */
+
+  Ottry — ticketing infrastructure
+  Вічна Ніч — eternal support
+  #УВХР — Ukrainian Witch House movement
+  Nikita — for being there
+  Everyone who bought a ticket into the void
+
+
+/* SITE */
+
+  Language: HTML / CSS / Vanilla JS
+  Fonts: Bebas Neue, Unbounded, Share Tech Mono (Google Fonts)
+  Analytics: Google Analytics 4
+  Hosting: tour.man1k.xyz
+  Standards: HTML5, CSS Custom Properties, IntersectionObserver
+  Last update: 2026-06-13
+
+
+/* NOTE */
+
+  This site may be deleted after the tour ends.
+  The void, however, is eternal.
+
+  — MAN1K

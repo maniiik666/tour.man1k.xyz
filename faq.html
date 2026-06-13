@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG92WF663X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZG92WF663X');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>FAQ — MAN1K Wild Heart Tour 2026</title>
+    <meta name="description"
+        content="Відповіді на питання про квитки, вхід, безпеку та правила на шоу MAN1K — Wild Heart Tour 2026.">
+    <meta property="og:title" content="FAQ — MAN1K Wild Heart Tour 2026">
+    <meta property="og:url" content="https://tickets.man1k.xyz/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://tickets.man1k.xyz/faq.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Unbounded:wght@200;400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #000;
+            --white: #fff;
+            --grey: #666;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: 'Unbounded', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ——— Page intro ——— */
+        .page-curtain {
+            position: fixed;
+            inset: 0;
+            z-index: 100000;
+            background: var(--black);
+            pointer-events: none;
+            transition: opacity 1s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .page-curtain.lifted {
+            opacity: 0
+        }
+
+        /* ——— Page glitch overlay ——— */
+        .page-glitch {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9997;
+            opacity: 0;
+            mix-blend-mode: screen;
+        }
+
+        .page-glitch.flash {
+            animation: pageGlitchFlash .15s steps(1) 1
+        }
+
+        @keyframes pageGlitchFlash {
+            0% {
+                opacity: 1;
+                clip-path: inset(20% 0 60% 0);
+                transform: translateX(-6px)
+            }
+
+            20% {
+                opacity: .8;
+                clip-path: inset(70% 0 5% 0);
+                transform: translateX(8px)
+            }
+
+            40% {
+                opacity: .6;
+                clip-path: inset(5% 0 75% 0);
+                transform: translateX(-4px)
+            }
+
+            70% {
+                opacity: .4;
+                clip-path: inset(50% 0 30% 0);
+                transform: translateX(3px)
+            }
+
+            100% {
+                opacity: 0;
+                clip-path: none;
+                transform: translateX(0)
+            }
+        }
+
+        /* ——— Grain (двошаровий) ——— */
+        .grain,
+        .grain2 {
+            position: fixed;
+            inset: -50%;
+            width: 200%;
+            height: 200%;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 256px 256px;
+        }
+
+        .grain {
+            opacity: .05;
+            animation: grain .2s steps(1) infinite
+        }
+
+        .grain2 {
+            opacity: .10;
+            animation: grain .35s steps(1) infinite reverse;
+            background-size: 128px 128px
+        }
+
+        @keyframes grain {
+            0% {
+                transform: translate(0, 0)
+            }
+
+            10% {
+                transform: translate(-3%, -4%)
+            }
+
+            20% {
+                transform: translate(4%, 2%)
+            }
+
+            30% {
+                transform: translate(-2%, 5%)
+            }
+
+            40% {
+                transform: translate(5%, -3%)
+            }
+
+            50% {
+                transform: translate(-4%, 3%)
+            }
+
+            60% {
+                transform: translate(3%, -5%)
+            }
+
+            70% {
+                transform: translate(-5%, 2%)
+            }
+
+            80% {
+                transform: translate(2%, 4%)
+            }
+
+            90% {
+                transform: translate(-3%, -2%)
+            }
+        }
+
+        /* ——— Scanlines ——— */
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9998;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, .18) 2px, rgba(0, 0, 0, .18) 4px);
+        }
+
+        /* ——— Custom cursor ——— */
+        .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--white);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99997;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+
+        .cursor-ring {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99996;
+            transform: translate(-50%, -50%);
+            transition: width .2s, height .2s, border-color .2s;
+        }
+
+        body.cursor-hover .cursor-ring {
+            width: 48px;
+            height: 48px;
+            border-color: var(--white)
+        }
+
+        /* ——— Topbar ——— */
+        .topbar {
+            border-bottom: 1px solid rgba(255, 255, 255, .35);
+            padding: 14px clamp(16px, 5vw, 72px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .topbar-text {
+            font-weight: 400;
+            font-size: clamp(6px, 1.1vw, 9px);
+            letter-spacing: .4em;
+            text-transform: uppercase;
+        }
+
+        .topbar-back {
+            font-weight: 700;
+            font-size: clamp(7px, 1.1vw, 9px);
+            letter-spacing: .35em;
+            color: var(--white);
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--white);
+            padding: 6px 14px;
+            transition: background .2s, color .2s;
+            white-space: nowrap;
+        }
+
+        .topbar-back:hover {
+            background: var(--white);
+            color: var(--black)
+        }
+
+        /* ——— Hero ——— */
+        .faq-hero {
+            padding: clamp(40px, 10vw, 120px) clamp(16px, 5vw, 72px) clamp(32px, 7vw, 80px);
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, .35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-hero::before {
+            content: '✝';
+            position: absolute;
+            font-size: clamp(200px, 55vw, 700px);
+            color: rgba(255, 255, 255, .03);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            line-height: 1;
+            animation: crosspulse 7s ease-in-out infinite;
+        }
+
+        @keyframes crosspulse {
+
+            0%,
+            100% {
+                opacity: .03;
+                transform: translate(-50%, -50%) scale(1)
+            }
+
+            50% {
+                opacity: .07;
+                transform: translate(-50%, -50%) scale(1.04)
+            }
+        }
+
+        .faq-hero-title {
+            font-weight: 900;
+            font-size: clamp(72px, 19vw, 220px);
+            line-height: .85;
+            letter-spacing: -.04em;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: fade-up .9s ease forwards .2s, titleflicker 14s steps(1) infinite 4s;
+        }
+
+        @keyframes titleflicker {
+
+            0%,
+            92%,
+            94%,
+            97%,
+            100% {
+                opacity: 1
+            }
+
+            93% {
+                opacity: .15
+            }
+
+            95% {
+                opacity: .6;
+                transform: translateX(-4px)
+            }
+
+            96% {
+                opacity: .08
+            }
+
+            98% {
+                opacity: .5;
+                transform: translateX(3px)
+            }
+
+            99% {
+                opacity: 1;
+                transform: translateX(0)
+            }
+        }
+
+        .faq-hero-title span {
+            font-weight: 200;
+            color: rgba(255, 255, 255, .22);
+            display: block;
+            font-size: .17em;
+            letter-spacing: .45em;
+            margin-top: .5em;
+        }
+
+        .faq-hero-sub {
+            position: relative;
+            z-index: 1;
+            margin-top: clamp(14px, 3vw, 32px);
+            font-weight: 200;
+            font-size: clamp(9px, 1.2vw, 11px);
+            letter-spacing: .2em;
+            color: var(--grey);
+            opacity: 0;
+            animation: fade-up .9s ease forwards .55s;
+        }
+
+        .faq-hero-sub a {
+            color: var(--white);
+            border-bottom: 1px solid var(--white);
+            text-decoration: none;
+            transition: opacity .2s;
+        }
+
+        .faq-hero-sub a:hover {
+            opacity: .45
+        }
+
+        /* ——— Glitch dividers ——— */
+        .glitch-div {
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glitch-div::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--black);
+            animation: glitch-line 5s ease-in-out infinite;
+        }
+
+        @keyframes glitch-line {
+
+            0%,
+            84%,
+            100% {
+                transform: translateX(-100%);
+                opacity: 0
+            }
+
+            87% {
+                transform: translateX(-45%);
+                opacity: 1
+            }
+
+            93% {
+                transform: translateX(65%);
+                opacity: 1
+            }
+
+            97% {
+                transform: translateX(110%);
+                opacity: 0
+            }
+        }
+
+        /* ——— FAQ Section ——— */
+        .faq-section {
+            padding: clamp(32px, 8vw, 96px) clamp(16px, 5vw, 72px);
+        }
+
+        .faq-category {
+            margin-bottom: clamp(32px, 6vw, 64px)
+        }
+
+        .faq-category:last-child {
+            margin-bottom: 0
+        }
+
+        /* CATEGORY LABEL */
+        .faq-category-label {
+            font-weight: 900;
+            font-size: clamp(9px, 1.6vw, 13px);
+            letter-spacing: .38em;
+            text-transform: uppercase;
+            color: var(--black);
+            background: var(--white);
+            padding: 10px 16px;
+            display: block;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: labelflicker 20s steps(1) infinite;
+        }
+
+        .faq-category-label::after {
+            content: attr(data-text);
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            color: var(--black);
+            animation: labelglitch 20s steps(1) infinite;
+            pointer-events: none;
+        }
+
+        @keyframes labelflicker {
+
+            0%,
+            96%,
+            98%,
+            100% {
+                opacity: 1
+            }
+
+            97% {
+                opacity: .2
+            }
+
+            99% {
+                opacity: .6
+            }
+        }
+
+        @keyframes labelglitch {
+
+            0%,
+            94%,
+            100% {
+                opacity: 0;
+                transform: none;
+                clip-path: none
+            }
+
+            95% {
+                opacity: 1;
+                transform: translateX(-6px);
+                clip-path: inset(20% 0 60% 0)
+            }
+
+            96% {
+                opacity: 1;
+                transform: translateX(4px);
+                clip-path: inset(55% 0 15% 0)
+            }
+
+            97% {
+                opacity: 0
+            }
+        }
+
+        /* ——— FAQ List ——— */
+        .faq-list {
+            list-style: none;
+            border: 1px solid rgba(255, 255, 255, .35);
+            border-top: none;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, .14);
+            position: relative;
+            border-left: 3px solid transparent;
+            transition: border-left-color .25s, background .25s;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none
+        }
+
+        .faq-item:hover {
+            border-left-color: var(--white);
+            background: rgba(255, 255, 255, .035);
+        }
+
+        .faq-item.open {
+            border-left-color: var(--white);
+            background: rgba(255, 255, 255, .055);
+        }
+
+        /* Question button */
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: clamp(10px, 2.5vw, 28px);
+            padding: clamp(14px, 2.4vw, 22px) clamp(14px, 2.4vw, 24px);
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, .7);
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            font-size: clamp(9px, 1.4vw, 12px);
+            letter-spacing: .05em;
+            text-align: left;
+            cursor: pointer;
+            position: relative;
+            text-transform: uppercase;
+            transition: color .25s, text-shadow .25s;
+        }
+
+        .faq-item:hover .faq-question {
+            color: var(--white);
+            text-shadow: 0 0 10px rgba(255, 255, 255, .7), 0 0 28px rgba(255, 255, 255, .25);
+            animation: q-glitch .22s steps(1) 1;
+        }
+
+        .faq-item.open .faq-question {
+            color: var(--white);
+            text-shadow: 0 0 8px rgba(255, 255, 255, .5);
+        }
+
+        @keyframes q-glitch {
+            0% {
+                transform: translateX(0);
+                clip-path: none
+            }
+
+            25% {
+                transform: translateX(-3px);
+                clip-path: inset(0 0 70% 0)
+            }
+
+            50% {
+                transform: translateX(3px);
+                clip-path: inset(60% 0 0 0)
+            }
+
+            75% {
+                transform: translateX(-1px);
+                clip-path: none
+            }
+
+            100% {
+                transform: translateX(0)
+            }
+        }
+
+        .faq-q-text {
+            flex: 1
+        }
+
+        /* Icon */
+        .faq-icon {
+            flex-shrink: 0;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 20px;
+            line-height: 1;
+            color: rgba(255, 255, 255, .4);
+            width: 20px;
+            text-align: center;
+            user-select: none;
+            transition: color .25s, transform .35s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        .faq-item:hover .faq-icon,
+        .faq-item.open .faq-icon {
+            color: var(--white)
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg)
+        }
+
+        /* Answer */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .55s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 1200px
+        }
+
+        .faq-answer-inner {
+            padding: 0 clamp(14px, 2.4vw, 24px) clamp(16px, 2.8vw, 24px);
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            font-weight: 200;
+            font-size: clamp(9px, 1.2vw, 11px);
+            line-height: 2;
+            color: #777;
+            max-width: 760px;
+        }
+
+        .faq-answer-inner a {
+            color: rgba(255, 255, 255, .6);
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+            text-decoration: none;
+            transition: color .2s, border-color .2s;
+        }
+
+        .faq-answer-inner a:hover {
+            color: var(--white);
+            border-color: var(--white)
+        }
+
+        .faq-answer-inner strong {
+            font-weight: normal;
+            color: rgba(255, 255, 255, .75)
+        }
+
+        .tag-red {
+            color: #c44;
+            font-weight: 700;
+            font-size: .9em
+        }
+
+        /* ——— Footer ——— */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, .35)
+        }
+
+        .footer-void {
+            padding: clamp(28px, 5vw, 52px) clamp(16px, 5vw, 72px);
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            text-align: center;
+        }
+
+        .footer-void-num {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(36px, 10vw, 96px);
+            color: rgba(255, 255, 255, .08);
+            letter-spacing: .1em;
+            line-height: 1;
+            display: block;
+            animation: voidflicker 11s steps(1) infinite;
+        }
+
+        @keyframes voidflicker {
+
+            0%,
+            93%,
+            96%,
+            100% {
+                opacity: 1
+            }
+
+            94% {
+                opacity: .1;
+                transform: translateX(-5px)
+            }
+
+            95% {
+                opacity: .5;
+                transform: translateX(4px)
+            }
+
+            97% {
+                opacity: .2
+            }
+
+            98% {
+                opacity: .8;
+                transform: translateX(-2px)
+            }
+
+            99% {
+                opacity: 1;
+                transform: translateX(0)
+            }
+        }
+
+        .footer-void-text {
+            margin-top: 12px;
+            font-weight: 400;
+            font-size: clamp(6px, 1.2vw, 10px);
+            letter-spacing: .2em;
+            color: rgba(255, 255, 255, .15);
+            text-transform: uppercase;
+            line-height: 1.8;
+        }
+
+        .footer-main {
+            padding: clamp(22px, 4vw, 44px) clamp(16px, 5vw, 72px);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .footer-brand {
+            display: block;
+            animation: brandblink 22s steps(1) infinite;
+            opacity: .55;
+            transition: opacity .2s;
+        }
+
+        .footer-brand:hover {
+            opacity: .85
+        }
+
+        .footer-brand img {
+            height: clamp(22px, 2.5vw, 15px);
+            width: auto;
+            display: block;
+        }
+
+        @keyframes brandblink {
+
+            0%,
+            97%,
+            99%,
+            100% {
+                opacity: 1;
+                transform: none
+            }
+
+            98% {
+                opacity: .2;
+                transform: translateX(3px)
+            }
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: flex-end
+        }
+
+        .footer-link {
+            font-size: 7px;
+            letter-spacing: .35em;
+            color: rgba(255, 255, 255, .2);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color .2s;
+        }
+
+        .footer-link:hover {
+            color: var(--white)
+        }
+
+        .footer-link.press {
+            color: rgba(255, 255, 255, .3);
+            border-bottom: 1px solid rgba(255, 255, 255, .15);
+            padding-bottom: 2px;
+        }
+
+        .footer-link.press:hover {
+            color: var(--white);
+            border-color: var(--white)
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 12px clamp(16px, 5vw, 72px);
+            font-size: 7px;
+            letter-spacing: .2em;
+            color: rgba(255, 255, 255, .15);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        /* ——— Animations ——— */
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity .65s ease, transform .65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        /* ——— Mobile ——— */
+        @media(max-width:600px) {
+            .topbar {
+                padding: 10px 14px
+            }
+
+            .faq-hero {
+                padding: 36px 14px 28px
+            }
+
+            .faq-hero-title {
+                font-size: clamp(56px, 18vw, 100px)
+            }
+
+            .faq-section {
+                padding: 24px 14px
+            }
+
+            .faq-category {
+                margin-bottom: 28px
+            }
+
+            .faq-category-label {
+                font-size: 8px;
+                letter-spacing: .28em;
+                padding: 9px 12px
+            }
+
+            .faq-question {
+                font-size: 9px;
+                letter-spacing: .03em;
+                padding: 14px 12px
+            }
+
+            .faq-answer-inner {
+                font-size: 10px;
+                padding: 0 12px 14px
+            }
+
+            .footer-void {
+                padding: 20px 14px
+            }
+
+            .footer-void-text {
+                font-size: 6px;
+                letter-spacing: .12em
+            }
+
+            .footer-main {
+                padding: 20px 14px
+            }
+
+            .footer-bottom {
+                padding: 10px 14px;
+                flex-direction: column;
+                text-align: center
+            }
+
+            .cursor-dot,
+            .cursor-ring {
+                display: none !important
+            }
+        }
+
+        @media(max-width:480px) {
+            .footer-main {
+                grid-template-columns: 1fr
+            }
+
+            .footer-nav {
+                align-items: flex-start
+            }
+
+            .footer-links {
+                justify-content: flex-start
+            }
+        }
+
+        @media(max-width:380px) {
+            .faq-hero-title {
+                font-size: clamp(44px, 16vw, 72px)
+            }
+
+            .topbar-text {
+                letter-spacing: .2em;
+                font-size: 7px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-curtain" id="pageCurtain"></div>
+    <div class="page-glitch" id="pageGlitch"></div>
+    <div class="grain"></div>
+    <div class="grain2"></div>
+    <div class="scanlines"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <header class="topbar">
+        <p class="topbar-text">Wild Heart Tour 2026</p>
+        <a href="index.html" class="topbar-back">← Назад</a>
+    </header>
+
+    <section class="faq-hero">
+        <h1 class="faq-hero-title">FAQ<span>Питання та відповіді</span></h1>
+        <p class="faq-hero-sub">Якщо відповіді немає — <a href="mailto:void@man1k.xyz">void@man1k.xyz</a></p>
+    </section>
+
+    <div class="glitch-div"></div>
+
+    <section class="faq-section">
+
+        <!-- I. КВИТКИ / ВХІД -->
+        <div class="faq-category reveal">
+            <p class="faq-category-label" data-text="I · КВИТКИ / ВХІД">I &nbsp;·&nbsp; КВИТКИ &nbsp;/&nbsp; ВХІД</p>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Як використати квиток?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            На імейл прийде QR-код. Показуєш на вході, охорона сканує, на руку ставлять
+                            штамп. Штамп = прохід. Зберігай скрін якщо нема інтернету.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Квитки на вході є?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Є — готівка або карта. Але купляти заздалегідь розумніше: на вході дорожче, і місць може
+                            просто не залишитись.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Можна виходити і повертатись?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Так — якщо на руці є штамп від охорони, можеш вільно виходити і заходити. Без штампа — як
+                            вперше.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Можна перепродати квиток?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Так, перепродаж дозволений. Якщо хочеш стати партнером і продавати офіційно — напиши в <a
+                                href="https://instagram.com/http.man1k" target="_blank" rel="noopener">інстаграм</a> або
+                            на <a href="mailto:void@man1k.xyz">void@man1k.xyz</a>.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Як повернути квиток?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Умови повернення регламентує квитковий оператор, у якого купував квиток. Квитки за
+                            промо-ціною поверненню не підлягають, але їх можна передати другу. Після завершення шоу —
+                            повернення неможливе.<br><br>
+                            Контакти Ottry (офіційний квитковий оператор в рамках туру):<br>
+                            <a href="mailto:info@ottry.com" style="color: var(--off);">info@ottry.com</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Не хочу щоб мої дані зберігались у квиткового оператора</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Направ запит на видалення даних напряму до квиткового оператора. Це їхня зона
+                            відповідальності — я не маю доступу до їхньої бази.<br><br>
+                            Контакти Ottry (офіційний квитковий оператор в рамках туру):<br>
+                            <a href="mailto:info@ottry.com" style="color: var(--off);">info@ottry.com</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- II. ВІК / ФЕЙСКОНТРОЛЬ -->
+        <div class="faq-category reveal">
+            <p class="faq-category-label" data-text="II · ВІК / ФЕЙСКОНТРОЛЬ">II &nbsp;·&nbsp; ВІК &nbsp;/&nbsp;
+                ФЕЙСКОНТРОЛЬ</p>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">З якого віку пускають?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <span class="tag-red">18+</span>. Обов'язково мати оригінал ID з фото або застосунок
+                            <strong>Дія</strong>. Без підтвердження особи та віку входу немає. Жодних виключень чи
+                            розмов.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Чи можна пройти, якщо мені немає 18 років?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Якщо тобі немає 18 — можеш прийти виключно у супроводі повнолітнього друга, під його повну
+                            особисту відповідальність. <strong>Алкоголь на барі відпускається виключно особам
+                                18+</strong>, і охорона це суворо контролює.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Які правила безпеки на вході?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <span class="tag-red">Будь-яка зброя суворо заборонена.</span> Підозра чи агресія — відмова
+                            у вході без повернення вартості квитка.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Які правила поведінки на івенті?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Агресія на вході = відмова. Агресія всередині = виведуть охоронці без розмов. Це ритуал для
+                            всіх присутніх — поважай простір інших.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Який дрес-код?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Дрес-код абсолютно вільний. Я раджу вибрати найтемніший аутфіт, щоб повністю
+                            розчинитись в атмосфері ночі.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- III. ШОУ -->
+        <div class="faq-category reveal">
+            <p class="faq-category-label" data-text="III · ШОУ">III &nbsp;·&nbsp; ШОУ</p>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Чи будуть саппорт сети?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Так. Імена — на сторінці конкретного івенту у квиткового оператора або <a
+                                href="https://www.bandsintown.com/a/15490511" target="_blank" rel="noopener">Bandsintown
+                                →</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Можна знімати відео і фото?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Так, знімай скільки хочеш — і поширюй. Навіть у комерційних цілях. Якщо тегнеш — ще краще.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Чи будуть записи або стріми?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Деякі сети будуть записані і опубліковані — але не одразу. Прямої трансляції не буде.
+                            Афтермуві — буде.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Можна зустрітись з артистом?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            До і після шоу — так, радий абсолютно всім. Під час сету — не турбувати. У гримерку — не
+                            заходити.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Mist — коли і на якій сцені?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <strong>TBA</strong>.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- IV. ЛОГІСТИКА -->
+        <div class="faq-category reveal">
+            <p class="faq-category-label" data-text="IV · ЛОГІСТИКА">IV &nbsp;·&nbsp; ЛОГІСТИКА</p>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Є гардероб / камера схову?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Залежить від майданчику — уточнюй у персоналу. Якщо немає — тримай речі при собі.
+                            Організатори не несуть відповідальності за загублене. Якщо щось зникло — <a
+                                href="mailto:void@man1k.xyz" style="color: var(--off);">void@man1k.xyz</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Як повернутись додому до комендантської?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Шоу зазвичай закінчуються близько 22:00 — встигнеш. Заклич таксі заздалегідь, не чекай
+                            натовпу на виході. На <strong>Mist</strong> — фестивальна територія закрита і безпечна
+                            під час комендантської, ніяких обмежень.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Де зона для паління?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Залежить від клубу — уточнюй у персоналу на місці. Електронні сигарети дозволені на всіх
+                            майданчиках.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- V. БЕЗПЕКА / HARM REDUCTION -->
+        <div id="safety" class="faq-category reveal">
+            <p class="faq-category-label" data-text="V · БЕЗПЕКА / HARM REDUCTION">V &nbsp;·&nbsp; БЕЗПЕКА &nbsp;/&nbsp;
+                HARM REDUCTION</p>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Що робити під час повітряної тривоги?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Більшість клубів — це обладнані підвальні приміщення. Якщо ти вже всередині — залишайся на
+                            місці. В інших випадках персонал закладу проведе до найближчого укриття. Слідкуй за
+                            вказівками адміністрації.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Що робити при передозуванні алкоголем?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Виведи людину у тихе місце, дай води і по можливості, не залишай одного.
+                            Якщо людина без свідомості або не реагує — виклич швидку:
+                            <strong>103</strong>.<br><br>
+                            Щоб не доводити до цього: поїж до початку івента. Не залишай свій напій без нагляду.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Що робити при передозуванні або бед трипі?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <strong>Одразу до охорони або персоналу.</strong> Скажи що саме і скільки — без цього
+                            допомогти складніше. Ніхто не здасть, ніхто не читатиме моралей. Тут потрібна швидкість, а
+                            не осуд.<br><br>
+                            Якщо вживаєш — не роби це наодинці. Попередь когось із друзів. Не змішуй з алкоголем. Пий
+                            воду. При перших ознаках нездужання — не мовчи.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Я став жертвою або свідком домагань / сексуального насильства</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <strong>Негайно до охорони або будь-якого персоналу.</strong> Не чекай, не вагайся, не
+                            мовчи. Якщо після — <a href="mailto:void@man1k.xyz"
+                                style="color: var(--off);">void@man1k.xyz</a>. Анонімність 100%,
+                            жодні дані третім особам.<br><br>
+                            Будь-який контакт без згоди — це насильство. Темрява і алкоголь не виправдання. Якщо бачиш —
+                            стань між ними, поклич персонал. Порушник буде видалений назавжди. Я підтримаю звернення
+                            до поліції.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- VI. МЕРЧ / БАР -->
+        <div class="faq-category reveal">
+            <p class="faq-category-label" data-text="VI · МЕРЧ / БАР">VI &nbsp;·&nbsp; МЕРЧ &nbsp;/&nbsp; БАР</p>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Де і як купити мерч?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Тільки на вході, готівка або карта. Кількість дуже обмежена — зарезервувати неможливо. В
+                            наявності <strong>L / XL</strong> унісекс футболки. Після туру мерч в Україні більше не
+                            буде.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Є шпера?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Є на всіх точках туру, крім Mist і Хмельницького. Питай безпосередньо на барі.<br><br>
+                            <strong>Кодекс шперарейвера:</strong><br><br>
+                            I. Замовив — поділись. Хто п'є сам, п'є у вічній темряві.<br>
+                            II. 2л на четверьох — ідеальна доза. Для ветеранів — 2л на двох.<br>
+                            III. Ніколи не змішуй шперу з іншим алкоголем після. Вона — фінальний акорд.<br>
+                            IV. Шпера і шаурма — нерозривний союз. До, після, і якщо дуже треба — під час.<br>
+                            V. Найкращий засіб від послешперія — ще одна шпера або шаурма.<br>
+                            VI. Кожен ковток — навмисний. Ритуал без уваги — не ритуал.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- VII. ІНШЕ -->
+        <div class="faq-category reveal">
+            <p class="faq-category-label" data-text="VII · ІНШЕ">VII &nbsp;·&nbsp; ІНШЕ</p>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Lost & Found</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Пиши на <a href="mailto:void@man1k.xyz" style="color: var(--off);">void@man1k.xyz</a> або
+                            в <a href="https://instagram.com/http.man1k" target="_blank" rel="noopener">інстаграм</a>.
+                            Якщо тебе пограбували — напиши на пошту і подай заяву до поліції.
+                        </div>
+                    </div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text">Прес-запити, пропозиції та скарги</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Прес-матеріали: <a href="presskit.pdf" target="_blank" rel="noopener">presskit.pdf
+                                →</a><br>
+                            Усе інше — <a href="https://instagram.com/http.man1k" target="_blank"
+                                rel="noopener">Instagram Direct</a> або <a href="mailto:void@man1k.xyz"
+                                style="color: var(--off);">void@man1k.xyz</a>. Для преси виключно пошта.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <div class="glitch-div"></div>
+
+    <footer>
+        <div class="footer-void">
+            <span class="footer-void-num">0 — 666 — 666</span>
+            <p class="footer-void-text">
+                Лінія між живим і мертвим — завжди була тонкою.<br>
+                Ти вже по той бік.
+            </p>
+        </div>
+        <div class="footer-main">
+            <div>
+                <a href="index.html" class="footer-brand"><img src="wordmark.png" alt="MAN1K"></a>
+            </div>
+            <nav class="footer-nav">
+                <div class="footer-links">
+                    <a href="privacy.html" class="footer-link">Privacy</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+                    <a href="mailto:void@man1k.xyz" class="footer-link">Contact</a>
+                </div>
+                <a href="presskit.pdf" class="footer-link press" target="_blank" rel="noopener">↗ Press Kit</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 ФОП Олена Володимирівна · All rights reserved</span>
+            <span>tickets.man1k.xyz</span>
+        </div>
+    </footer>
+
+    <script>
+        /* Page intro */
+        (function () {
+            const c = document.getElementById('pageCurtain');
+            if (!c) return;
+            setTimeout(() => c.classList.add('lifted'), 200);
+            setTimeout(() => c.style.display = 'none', 1300);
+        })();
+
+        /* Page glitch */
+        (function () {
+            const gl = document.getElementById('pageGlitch');
+            if (!gl) return;
+            gl.style.background = 'linear-gradient(0deg,transparent 40%,rgba(255,255,255,.04) 41%,transparent 42%,transparent 58%,rgba(255,255,255,.03) 59%,transparent 60%)';
+            function fire() {
+                gl.classList.remove('flash');
+                void gl.offsetWidth;
+                gl.classList.add('flash');
+                setTimeout(() => gl.classList.remove('flash'), 180);
+                setTimeout(fire, 2000 + Math.random() * 7000);
+            }
+            setTimeout(fire, 1500 + Math.random() * 3000);
+        })();
+
+        /* Custom cursor */
+        const dot = document.getElementById('cursorDot'), ring = document.getElementById('cursorRing');
+        let mx = 0, my = 0, rx = 0, ry = 0;
+        if (!('ontouchstart' in window)) {
+            document.addEventListener('mousemove', e => {
+                mx = e.clientX; my = e.clientY;
+                dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+            });
+            (function animRing() {
+                rx += (mx - rx) * .14; ry += (my - ry) * .14;
+                ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+                requestAnimationFrame(animRing);
+            })();
+            document.querySelectorAll('a,button,.faq-item').forEach(el => {
+                el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+            });
+        } else {
+            dot.style.display = 'none'; ring.style.display = 'none';
+        }
+
+        /* Reveal */
+        const revObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
+            });
+        }, { threshold: .05 });
+        document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+        /* FAQ accordion */
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const item = this.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item.open').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    i.querySelector('.faq-icon').textContent = '+';
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    this.setAttribute('aria-expanded', 'true');
+                    this.querySelector('.faq-icon').textContent = '×';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
