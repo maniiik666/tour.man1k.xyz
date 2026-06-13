@@ -24,11 +24,11 @@
     <meta property="og:url" content="https://tickets.man1k.xyz">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="uk_UA">
-<meta property="og:image" content="https://tour.man1k.xyz/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="628">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://tour.man1k.xyz/og.png">
+    <meta property="og:image" content="https://tour.man1k.xyz/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://tour.man1k.xyz/og.png">
     <meta name="twitter:title" content="MAN1K — WILD HEART TOUR 2026">
     <meta name="twitter:description" content="Відкрий очі на зустріч ночі. 8 міст · 10 шоу · ∞ вічність.">
     <meta name="theme-color" content="#000000">
@@ -968,6 +968,33 @@
             color: #d4af37;
         }
 
+        /* ——— Dates action strip ——— */
+        .dates-actions {
+            display: flex;
+            gap: 10px;
+            padding: 18px 0 0;
+            flex-wrap: wrap;
+        }
+
+        .dates-action-btn {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 8px;
+            letter-spacing: .28em;
+            color: var(--dim);
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 255, 255, .12);
+            padding: 7px 14px;
+            transition: color .25s, border-color .25s;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .dates-action-btn:hover {
+            color: var(--off);
+            border-color: rgba(255, 255, 255, .28);
+        }
+
         @media(max-width:500px) {
             .date-link {
                 grid-template-columns: 52px 1fr;
@@ -1586,6 +1613,10 @@
                     </span>
                 </a></li>
         </ul>
+        <div class="dates-actions">
+            <a href="prices.html" class="dates-action-btn">/ тарифи →</a>
+            <a href="https://tally.so/r/dW8YBz" class="dates-action-btn" target="_blank" rel="noopener">/ волонтерство ↗</a>
+        </div>
     </section>
 
     <!-- Partners — оновлений розділ -->
